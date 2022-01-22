@@ -29,6 +29,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    packagingOptions {
+        exclude 'com/itextpdf/io/font/cmap_info.txt'
+        exclude 'com/itextpdf/io/font/cmap/*'
+    }
 }
 
 dependencies {
@@ -38,6 +43,7 @@ dependencies {
     implementation 'com.github.pqpo:SmartCropper:v2.1.3'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:17.0.1'
+    implementation "com.itextpdf:itext7-core:7.1.3"
     implementation fileTree(dir: 'D:\\Users\\AndroidStudioProjects\\Lec2PDF\\app\\src\\main\\java\\com\\bhavya\\lec2pdf\\libs', include: ['*.aar', '*.jar'], exclude: [])
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
